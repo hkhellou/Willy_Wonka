@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.WorkerInfoFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_worker"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_worker_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="6dp"
+        android:gravity="end"
+        android:text="Houssam"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_worker_last_name"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/img_worker" />
+
+    <TextView
+        android:id="@+id/tv_worker_last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Khellou"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/tv_worker_name"
+        app:layout_constraintTop_toBottomOf="@id/img_worker" />
+
+    <ImageView
+        android:id="@+id/img_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_work_outline_24"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_worker_name" />
+
+    <TextView
+        android:id="@+id/tv_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/LAST_NAME_LABEL"
+        app:layout_constraintBottom_toBottomOf="@id/img_work"
+        app:layout_constraintStart_toEndOf="@id/img_work"
+        app:layout_constraintTop_toTopOf="@id/img_work" />
+
+    <ImageView
+        android:id="@+id/img_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/ic_baseline_location_city_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_work"
+        app:layout_constraintEnd_toStartOf="@id/tv_country"
+        app:layout_constraintTop_toTopOf="@id/img_work" />
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/LAST_NAME_LABEL"
+        app:layout_constraintBottom_toBottomOf="@id/img_work"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/img_work" />
+
+    <ImageView
+        android:id="@+id/img_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_timelapse_24"
+        app:layout_constraintEnd_toStartOf="@id/tv_age"
+        app:layout_constraintStart_toStartOf="@+id/img_work"
+        app:layout_constraintTop_toBottomOf="@id/img_work" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/LAST_NAME_LABEL"
+        app:layout_constraintBottom_toBottomOf="@id/img_age"
+        app:layout_constraintStart_toEndOf="@+id/img_age"
+        app:layout_constraintTop_toTopOf="@id/img_age" />
+
+    <ImageView
+        android:id="@+id/img_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/ic_baseline_height_24"
+        app:layout_constraintEnd_toStartOf="@id/tv_height"
+        app:layout_constraintStart_toStartOf="@+id/img_country"
+        app:layout_constraintTop_toBottomOf="@+id/img_country" />
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left|center"
+        android:text="@string/LAST_NAME_LABEL"
+        app:layout_constraintStart_toEndOf="@id/img_height"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintBottom_toBottomOf="@+id/img_height"
+        app:layout_constraintTop_toTopOf="@+id/img_height" />
+
+    <ImageView
+        android:id="@+id/img_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_wc_24"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/img_age" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:text="@string/LAST_NAME_LABEL"
+        app:layout_constraintBottom_toBottomOf="@id/img_gender"
+        app:layout_constraintStart_toEndOf="@id/img_gender"
+        app:layout_constraintTop_toTopOf="@id/img_gender" />
+
+    <TextView
+        android:id="@+id/btn_desc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/LightCoral"
+        android:gravity="center"
+        android:text="@string/DESCRIPTION"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_gender"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/img_height"
+        app:layout_constraintTop_toTopOf="@+id/img_gender" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/img_gender"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_mail_outline_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:text="@string/LAST_NAME_LABEL"
+                app:layout_constraintBottom_toBottomOf="@id/img_mail"
+                app:layout_constraintStart_toEndOf="@id/img_mail"
+                app:layout_constraintTop_toTopOf="@id/img_mail" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

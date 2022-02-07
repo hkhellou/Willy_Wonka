@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Willy Wonka</string>
+    <string name="NAME_LABEL">FIRST NAME</string>
+    <string name="LAST_NAME_LABEL">LAST NAME</string>
+    <string name="DESCRIPTION">DESCRIPTION</string>
+    <string name="YEARS">years</string>
+    <string name="GENDER">gender</string>
+    <string name="MALE">MALE</string>
+    <string name="FEMALE">FEMALE</string>
+    <string name="F">F</string>
+    <string name="M">M</string>
+    <string name="CM">CM</string>
+</resources>
